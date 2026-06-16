@@ -11,11 +11,11 @@ export default function Navbar() {
 
       {/* Links */}
       <div className="flex gap-6 text-sm">
-        <Link href="/pages/accueil">Accueil</Link>
-        <Link href="/pages/catalogue">Catalogue</Link>
-        <Link href="/pages/reservation">Réservation</Link>
-        <Link href="/pages/a-propos">À propos</Link>
-        <Link href="/pages/contact">Contact</Link>
+        <Link href="/accueil">Accueil</Link>
+        <Link href="/catalogue">Catalogue</Link>
+        <Link href="/reservation">Réservation</Link>
+        <Link href="/a-propos">À propos</Link>
+        <Link href="/contact">Contact</Link>
       </div>
 
     </nav>
