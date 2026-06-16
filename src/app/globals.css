@@ -1,21 +1,30 @@
 @import "tailwindcss";
+@import "../styles/variable.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--surface);
+  --foreground: var(--text-primary);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-black: var(--black);
+  --color-black-soft: var(--black-soft);
+  --color-black-muted: var(--black-muted);
+  --color-black-elevated: var(--black-elevated);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-muted: var(--gold-muted);
+  --color-gold-dark: var(--gold-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--surface);
+    --foreground: var(--text-primary);
   }
 }
 

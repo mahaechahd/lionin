@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default function AccueilPage() {
-  return <h1>Accueil</h1>;
+  redirect("/");
 }

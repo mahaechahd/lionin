@@ -1,0 +1,24 @@
+:root {
+  --black: #080806;
+  --black-soft: #14130f;
+  --black-muted: #242118;
+  --black-elevated: #1a1812;
+  --black-border: rgba(255, 255, 255, 0.12);
+
+  --gold: #d8ad45;
+  --gold-light: #f2d37a;
+  --gold-muted: #a9822f;
+  --gold-dark: #7d5a17;
+  --gold-contrast: #2a1d06;
+  --gold-glow: rgba(216, 173, 69, 0.32);
+
+  --surface: var(--black);
+  --surface-soft: var(--black-soft);
+  --surface-elevated: var(--black-elevated);
+  --border-subtle: var(--black-border);
+  --accent: var(--gold);
+  --accent-hover: var(--gold-light);
+  --accent-muted: var(--gold-muted);
+  --text-primary: #fffaf0;
+  --text-secondary: #c9c0ad;
+}
