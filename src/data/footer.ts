@@ -1,6 +1,6 @@
 export const footerServices = [
-  "Achat & vente",
+  "Location résidentielle",
   "Sélection privée",
   "Gestion de visite",
-  "Conseil investissement",
+  "Accompagnement bail",
 ];

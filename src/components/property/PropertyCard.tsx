@@ -7,35 +7,37 @@ type PropertyCardProps = {
 
 export default function PropertyCard({ property }: PropertyCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden border border-[var(--border-subtle)] bg-[var(--black-soft)] transition-transform duration-200 hover:-translate-y-1">
-      <div className="relative h-52 bg-[linear-gradient(145deg,rgba(242,211,122,0.2),rgba(255,255,255,0.12)_34%,rgba(8,8,6,0.94))] sm:h-60">
-        <span className="absolute left-4 top-4 bg-[var(--gold)] px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-[var(--black)]">
+    <article className="group flex h-full min-w-0 flex-col overflow-hidden border border-[var(--border-subtle)] bg-[var(--black-soft)] shadow-[0_20px_70px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--gold-muted)]">
+      <div className="relative h-52 overflow-hidden bg-[linear-gradient(145deg,rgba(242,211,122,0.22),rgba(255,255,255,0.12)_34%,rgba(8,8,6,0.94))] sm:h-60">
+        <div className="absolute inset-0 opacity-70 transition-transform duration-500 group-hover:scale-105">
+          <div className="absolute left-[8%] top-[18%] h-[62%] w-[84%] border border-[rgba(242,211,122,0.26)] bg-[rgba(255,250,240,0.05)]" />
+          <div className="absolute left-[15%] top-[30%] h-[26%] w-[22%] border border-[rgba(242,211,122,0.22)] bg-[rgba(255,250,240,0.08)]" />
+          <div className="absolute left-[41%] top-[30%] h-[26%] w-[22%] border border-[rgba(242,211,122,0.22)] bg-[rgba(255,250,240,0.08)]" />
+          <div className="absolute left-[67%] top-[30%] h-[26%] w-[18%] border border-[rgba(242,211,122,0.22)] bg-[rgba(255,250,240,0.08)]" />
+          <div className="absolute bottom-[18%] left-[14%] h-[2px] w-[72%] bg-[rgba(242,211,122,0.28)]" />
+        </div>
+        <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] bg-[var(--gold)] px-2.5 py-1 text-xs font-bold uppercase tracking-[0.1em] text-[var(--black)] sm:left-4 sm:top-4 sm:px-3 sm:tracking-[0.14em]">
           {property.tag}
         </span>
-        <div className="absolute bottom-5 left-5 right-5 grid grid-cols-4 gap-2 opacity-90">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <span
-              key={index}
-              className="h-8 border border-[rgba(242,211,122,0.24)] bg-[rgba(255,250,240,0.08)] sm:h-9"
-            />
-          ))}
-        </div>
+        <span className="absolute bottom-4 left-4 bg-[rgba(8,8,6,0.76)] px-3 py-2 text-sm font-semibold text-[var(--gold-light)] backdrop-blur">
+          {property.price}
+        </span>
       </div>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm uppercase tracking-[0.18em] text-[var(--text-secondary)]">
+          <p className="text-xs uppercase tracking-[0.14em] text-[var(--text-secondary)] sm:text-sm sm:tracking-[0.18em]">
             {property.location}
           </p>
-          <span className="w-fit border border-[rgba(242,211,122,0.24)] px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--gold-light)]">
+          <span className="w-fit max-w-full border border-[rgba(242,211,122,0.24)] px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--gold-light)] sm:tracking-[0.14em]">
             {property.category}
           </span>
         </div>
 
-        <h3 className="mt-2 text-xl font-semibold text-white">
+        <h3 className="mt-2 text-lg font-semibold text-white sm:text-xl">
           {property.title}
         </h3>
-        <p className="mt-3 leading-6 text-[var(--text-secondary)]">
+        <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)] sm:text-base">
           {property.detail}
         </p>
 
@@ -55,14 +57,14 @@ export default function PropertyCard({ property }: PropertyCardProps) {
         </div>
 
         <div className="mt-auto flex flex-col gap-4 pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-semibold text-[var(--gold-light)]">
+          <p className="font-semibold leading-6 text-[var(--gold-light)]">
             {property.price}
           </p>
           <Link
             href="/reservation"
-            className="inline-flex h-11 items-center justify-center border border-[var(--gold-muted)] px-4 text-sm font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[var(--black)] hover:text-[var(--gold-light)] sm:h-auto sm:border-0 sm:px-0"
+            className="inline-flex min-h-11 items-center justify-center border border-[var(--gold-muted)] px-4 py-2 text-sm font-bold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[var(--black)] hover:text-[var(--gold-light)] sm:min-h-0 sm:border-0 sm:px-0 sm:py-0 sm:tracking-[0.14em]"
           >
-            Visiter
+            Demander une visite
           </Link>
         </div>
       </div>

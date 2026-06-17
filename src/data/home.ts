@@ -1,25 +1,25 @@
 export const heroStats = [
-  { value: "48h", label: "pour recevoir une première sélection" },
+  { value: "48h", label: "pour recevoir une sélection locative qualifiée" },
   { value: "120+", label: "biens analysés avant mise en avant" },
-  { value: "23 secteurs", label: "CFC, anfa" },
+  { value: "23 secteurs", label: "Casablanca, Rabat, Bouskoura et environs" },
 ];
 
 export const trustPoints = [
-  "Mandats qualifiés",
+  "Locations vérifiées",
   "Visites privées",
-  "Conseil patrimonial",
+  "Baux sécurisés",
 ];
 
 export const homeServices = [
   {
-    title: "Achat & vente",
+    title: "Location résidentielle",
     description:
-      "Un accompagnement clair pour estimer, positionner et négocier votre bien avec précision.",
+      "Appartements, villas et studios sélectionnés selon votre budget, votre rythme et vos priorités.",
   },
   {
     title: "Sélection privée",
     description:
-      "Des biens filtrés selon vos critères, votre rythme et votre vision patrimoniale.",
+      "Des biens filtrés, vérifiés et présentés clairement avant chaque visite.",
   },
   {
     title: "Gestion de visite",
@@ -27,9 +27,9 @@ export const homeServices = [
       "Organisation, qualification et suivi complet pour chaque visite importante.",
   },
   {
-    title: "Conseil investissement",
+    title: "Accompagnement bail",
     description:
-      "Lecture du marché, potentiel locatif et stratégie d'acquisition avant décision.",
+      "Lecture du contrat, conditions de location et préparation des prochaines étapes.",
   },
 ];
 
@@ -37,30 +37,30 @@ export const processSteps = [
   {
     title: "Comprendre",
     description:
-      "Nous clarifions vos objectifs, votre budget et les critères qui ne sont pas négociables.",
+      "Nous clarifions votre budget mensuel, vos secteurs, vos délais et vos critères essentiels.",
   },
   {
     title: "Sélectionner",
     description:
-      "Nous filtrons les biens, vérifions leur cohérence et préparons une short-list pertinente.",
+      "Nous filtrons les locations, vérifions leur cohérence et préparons une short-list pertinente.",
   },
   {
-    title: "Négocier",
+    title: "Visiter",
     description:
-      "Nous vous accompagnons sur l'offre, les échanges et les étapes jusqu'à la signature.",
+      "Nous organisons les visites, cadrons les conditions et vous accompagnons jusqu'au bail.",
   },
 ];
 
 export const marketHighlights = [
   {
-    title: "Résidences de prestige",
+    title: "Résidences de standing",
     description:
-      "Villas, penthouses et maisons d'architecte choisis pour leur emplacement et leur qualité.",
+      "Villas, penthouses et appartements meublés choisis pour leur emplacement et leur qualité.",
   },
   {
-    title: "Investissement locatif",
+    title: "Location longue durée",
     description:
-      "Analyse de rendement, demande locale et potentiel de valorisation avant acquisition.",
+      "Biens adaptés aux familles, cadres et expatriés qui cherchent une adresse fiable.",
   },
   {
     title: "Biens confidentiels",
@@ -74,13 +74,13 @@ export const testimonials = [
     quote:
       "LIONIN a compris notre recherche dès le premier rendez-vous. Le suivi était précis, sobre et très professionnel.",
     author: "Nadia B.",
-    role: "Acquéreuse à Casablanca",
+    role: "Locataire à Casablanca",
   },
   {
     quote:
-      "Nous avons vendu plus vite que prévu, avec une présentation du bien vraiment premium.",
+      "La visite était préparée, les informations étaient claires et le bail a été cadré sans friction.",
     author: "Yassine M.",
-    role: "Propriétaire vendeur",
+    role: "Propriétaire bailleur",
   },
   {
     quote:
@@ -91,9 +91,9 @@ export const testimonials = [
 ];
 
 export const finalCta = {
-  title: "Prêt à découvrir votre prochaine adresse ?",
+  title: "Prêt à trouver votre prochaine adresse à louer ?",
   description:
-    "Parlez-nous de votre projet. LIONIN prépare une sélection claire, réaliste et alignée avec vos priorités.",
-  primaryLabel: "Démarrer ma recherche",
+    "Parlez-nous de votre recherche. LIONIN prépare une sélection claire, réaliste et alignée avec votre budget.",
+  primaryLabel: "Demander une visite",
   secondaryLabel: "Voir les biens",
 };

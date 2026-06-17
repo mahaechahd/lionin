@@ -1,35 +1,53 @@
 import { navLinks } from "@/data/navigation";
+import Button from "@/components/ui/Button";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
     <nav
       aria-label="Navigation principale"
-      className="sticky top-0 z-50 w-full border-b border-[var(--border-subtle)] bg-[linear-gradient(135deg,var(--black),var(--black-soft))] px-5 py-4 text-[var(--text-primary)] shadow-[0_18px_55px_rgba(0,0,0,0.32)] backdrop-blur md:px-10"
+      className="sticky top-0 z-50 w-full border-b border-[rgba(242,211,122,0.18)] bg-[rgba(8,8,6,0.9)] px-4 py-3 text-[var(--text-primary)] shadow-[0_18px_55px_rgba(0,0,0,0.32)] backdrop-blur-xl md:px-10"
     >
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <Link
           href="/"
-          className="group flex w-fit items-center gap-3 text-xl font-semibold tracking-wide"
+          className="group flex w-fit items-center gap-3"
+          aria-label="LIONIN Immobilier - Accueil"
         >
-          <span className="grid size-10 place-items-center rounded-sm border border-[var(--gold)] bg-[var(--gold-contrast)] text-sm font-bold text-[var(--gold-light)] shadow-[0_0_24px_var(--gold-glow)] transition-colors group-hover:bg-[var(--gold)] group-hover:text-[var(--black)]">
-            LI
+          <span className="relative block size-14 overflow-hidden rounded-sm border border-[var(--gold)] bg-black shadow-[0_0_24px_var(--gold-glow)] sm:size-16">
+            <Image
+              src="/images/logo-lionin.jpg"
+              alt="Logo LIONIN Immobilier"
+              fill
+              priority
+              sizes="(min-width: 640px) 64px, 56px"
+              className="object-contain"
+            />
           </span>
-          <span className="leading-none text-[var(--gold-light)]">
-            LIONIN
+          <span className="hidden sm:block">
+            <span className="block text-sm font-semibold uppercase tracking-[0.22em] text-white">
+              LIONIN
+            </span>
+            <span className="mt-0.5 block text-xs uppercase tracking-[0.18em] text-[var(--gold-light)]">
+              Immobilier
+            </span>
           </span>
         </Link>
 
-        <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-[var(--text-secondary)] sm:justify-end">
+        <div className="flex flex-wrap items-center gap-1.5 text-sm font-medium text-[var(--text-secondary)] lg:justify-end lg:gap-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-sm border border-transparent px-3 py-2 transition-all duration-200 hover:border-[var(--gold-muted)] hover:bg-[var(--black-elevated)] hover:text-[var(--gold-light)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--gold)]"
+              className="rounded-sm border border-transparent px-2.5 py-2 transition-all duration-200 hover:border-[var(--gold-muted)] hover:bg-[var(--black-elevated)] hover:text-[var(--gold-light)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--gold)] sm:px-3"
             >
               {link.label}
             </Link>
           ))}
+          <Button href="/reservation" size="sm" className="ml-0 mt-1 sm:ml-2 sm:mt-0">
+            Demander une visite
+          </Button>
         </div>
       </div>
     </nav>

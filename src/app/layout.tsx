@@ -4,7 +4,9 @@ import Navbar from "@/components/navbar/Navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LIONIN",
+  title: "LIONIN Immobilier | Locations premium au Maroc",
+  description:
+    "Agence immobilière premium spécialisée dans la location de villas, appartements et biens haut standing au Maroc.",
 };
 
 export default function RootLayout({
@@ -15,15 +17,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-
         <Navbar />
 
-        <main className="p-6">
-          {children}
-        </main>
+        <main>{children}</main>
 
         <Footer />
-
       </body>
     </html>
   );

@@ -1,28 +1,40 @@
 import { footerServices } from "@/data/footer";
 import { navLinks } from "@/data/navigation";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--border-subtle)] bg-[linear-gradient(180deg,var(--black-soft),var(--black))] px-6 py-12 text-[var(--text-primary)] sm:px-10 lg:px-16">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
+    <footer className="border-t border-[var(--border-subtle)] bg-[linear-gradient(180deg,var(--black-soft),var(--black))] px-4 py-10 text-[var(--text-primary)] sm:px-10 sm:py-12 lg:px-16">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.7fr_0.7fr_0.8fr]">
         <div>
           <Link href="/" className="flex w-fit items-center gap-3">
-            <span className="grid size-10 place-items-center rounded-sm border border-[var(--gold)] bg-[var(--gold-contrast)] text-sm font-bold text-[var(--gold-light)]">
-              LI
+            <span className="relative block size-20 overflow-hidden rounded-sm border border-[var(--gold)] bg-black sm:size-24">
+              <Image
+                src="/images/logo-lionin.jpg"
+                alt="Logo LIONIN Immobilier"
+                fill
+                sizes="(min-width: 640px) 96px, 80px"
+                className="object-contain"
+              />
             </span>
-            <span className="text-xl font-semibold tracking-wide text-[var(--gold-light)]">
-              LIONIN
+            <span>
+              <span className="block text-base font-semibold uppercase tracking-[0.22em] text-white">
+                LIONIN
+              </span>
+              <span className="mt-1 block text-xs uppercase tracking-[0.18em] text-[var(--gold-light)]">
+                Immobilier
+              </span>
             </span>
           </Link>
           <p className="mt-5 max-w-md leading-7 text-[var(--text-secondary)]">
-            Immobilier premium au Maroc, avec une sélection exigeante et un
-            accompagnement clair pour chaque décision importante.
+            Locations premium au Maroc, avec une sélection exigeante, des
+            visites maîtrisées et un accompagnement clair jusqu&apos;au bail.
           </p>
         </div>
 
         <nav aria-label="Navigation du pied de page">
-          <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--gold)]">
+          <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold)] sm:text-sm sm:tracking-[0.18em]">
             Navigation
           </h2>
           <div className="mt-5 grid gap-3">
@@ -39,7 +51,7 @@ export default function Footer() {
         </nav>
 
         <div>
-          <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--gold)]">
+          <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold)] sm:text-sm sm:tracking-[0.18em]">
             Services
           </h2>
           <div className="mt-5 grid gap-3">
@@ -48,6 +60,21 @@ export default function Footer() {
                 {service}
               </p>
             ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold)] sm:text-sm sm:tracking-[0.18em]">
+            Contact
+          </h2>
+          <div className="mt-5 grid gap-3 text-sm text-[var(--text-secondary)]">
+            <p>Casablanca, Maroc</p>
+            <a href="tel:+212600000000" className="w-fit hover:text-[var(--gold-light)]">
+              +212 6 00 00 00 00
+            </a>
+            <a href="mailto:contact@lionin.ma" className="w-fit hover:text-[var(--gold-light)]">
+              contact@lionin.ma
+            </a>
           </div>
         </div>
       </div>
