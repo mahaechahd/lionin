@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Appartement premium meublé</title>
+  <desc id="desc">Temporary property image placeholder for Appartement premium meublé.</desc>
+  <rect width="1200" height="800" fill="#14130f"/>
+  <rect x="190" y="110" width="820" height="570" fill="#211d14" stroke="#d8ad45" stroke-width="8"/>
+  <path d="M280 220h160v130H280zM520 220h160v130H520zM760 220h160v130H760zM280 430h160v130H280zM520 430h160v130H520zM760 430h160v130H760z" fill="#3a321f" stroke="#f2d37a" stroke-width="5"/>
+  <path d="M210 620h780" stroke="#f2d37a" stroke-width="10"/>
+  <text x="600" y="720" fill="#fffaf0" font-family="Arial, sans-serif" font-size="42" text-anchor="middle">Appartement premium meublé</text>
+</svg>

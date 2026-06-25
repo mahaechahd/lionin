@@ -15,7 +15,7 @@ export default function Navbar() {
           className="group flex w-fit items-center gap-3"
           aria-label="LIONIN Immobilier - Accueil"
         >
-          <span className="relative block size-14 overflow-hidden rounded-sm border border-[var(--gold)] bg-black shadow-[0_0_24px_var(--gold-glow)] sm:size-16">
+          <span className="relative block size-14 overflow-hidden rounded-sm bg-black shadow-[0_0_24px_var(--gold-glow)] sm:size-16">
             <Image
               src="/images/logo-lionin.jpg"
               alt="Logo LIONIN Immobilier"

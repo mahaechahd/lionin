@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.7fr_0.7fr_0.8fr]">
         <div>
           <Link href="/" className="flex w-fit items-center gap-3">
-            <span className="relative block size-20 overflow-hidden rounded-sm border border-[var(--gold)] bg-black sm:size-24">
+            <span className="relative block size-20 overflow-hidden rounded-sm bg-black sm:size-24">
               <Image
                 src="/images/logo-lionin.jpg"
                 alt="Logo LIONIN Immobilier"

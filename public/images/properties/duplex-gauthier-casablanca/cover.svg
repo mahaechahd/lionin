@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Duplex rénové</title>
+  <desc id="desc">Temporary property image placeholder for Duplex rénové.</desc>
+  <rect width="1200" height="800" fill="#14130f"/>
+  <rect x="230" y="120" width="740" height="560" fill="#211d14" stroke="#d8ad45" stroke-width="8"/>
+  <path d="M310 220h190v140H310zM700 220h190v140H700zM310 450h190v140H310zM700 450h190v140H700z" fill="#3a321f" stroke="#f2d37a" stroke-width="5"/>
+  <path d="M600 120v560" stroke="#d8ad45" stroke-width="6"/>
+  <text x="600" y="720" fill="#fffaf0" font-family="Arial, sans-serif" font-size="42" text-anchor="middle">Duplex rénové</text>
+</svg>

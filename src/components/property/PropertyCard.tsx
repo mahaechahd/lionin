@@ -1,4 +1,5 @@
 import type { Property } from "@/data/property";
+import Image from "next/image";
 import Link from "next/link";
 
 type PropertyCardProps = {
@@ -6,18 +7,24 @@ type PropertyCardProps = {
 };
 
 export default function PropertyCard({ property }: PropertyCardProps) {
+  const coverImage = property.images[0];
+
   return (
     <article className="group flex h-full min-w-0 flex-col overflow-hidden border border-[var(--border-subtle)] bg-[var(--black-soft)] shadow-[0_20px_70px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--gold-muted)]">
       <div className="relative h-52 overflow-hidden bg-[linear-gradient(145deg,rgba(242,211,122,0.22),rgba(255,255,255,0.12)_34%,rgba(8,8,6,0.94))] sm:h-60">
-        <div className="absolute inset-0 opacity-70 transition-transform duration-500 group-hover:scale-105">
-          <div className="absolute left-[8%] top-[18%] h-[62%] w-[84%] border border-[rgba(242,211,122,0.26)] bg-[rgba(255,250,240,0.05)]" />
-          <div className="absolute left-[15%] top-[30%] h-[26%] w-[22%] border border-[rgba(242,211,122,0.22)] bg-[rgba(255,250,240,0.08)]" />
-          <div className="absolute left-[41%] top-[30%] h-[26%] w-[22%] border border-[rgba(242,211,122,0.22)] bg-[rgba(255,250,240,0.08)]" />
-          <div className="absolute left-[67%] top-[30%] h-[26%] w-[18%] border border-[rgba(242,211,122,0.22)] bg-[rgba(255,250,240,0.08)]" />
-          <div className="absolute bottom-[18%] left-[14%] h-[2px] w-[72%] bg-[rgba(242,211,122,0.28)]" />
-        </div>
+        <Image
+          src={coverImage.src}
+          alt={coverImage.alt}
+          fill
+          sizes="(min-width: 1536px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,8,6,0.04),rgba(8,8,6,0.72))]" />
         <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] bg-[var(--gold)] px-2.5 py-1 text-xs font-bold uppercase tracking-[0.1em] text-[var(--black)] sm:left-4 sm:top-4 sm:px-3 sm:tracking-[0.14em]">
           {property.tag}
+        </span>
+        <span className="absolute right-3 top-3 bg-[rgba(8,8,6,0.76)] px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-white backdrop-blur sm:right-4 sm:top-4">
+          {property.images.length} photo{property.images.length > 1 ? "s" : ""}
         </span>
         <span className="absolute bottom-4 left-4 bg-[rgba(8,8,6,0.76)] px-3 py-2 text-sm font-semibold text-[var(--gold-light)] backdrop-blur">
           {property.price}

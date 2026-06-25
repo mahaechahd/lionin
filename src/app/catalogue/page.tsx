@@ -8,7 +8,6 @@ const quickFilters = [
   "Disponible maintenant",
   "Meublé",
   "Longue durée",
-  "Exclusif",
 ];
 
 export default function CataloguePage() {
@@ -47,14 +46,14 @@ export default function CataloguePage() {
       </section>
 
       <section className="px-4 py-12 sm:px-8 sm:py-16 lg:px-16 lg:py-20">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <SectionTitle
             eyebrow="Sélection actuelle"
             title="Tous les biens à louer"
             description="Une base claire pour identifier les biens à visiter et avancer vers une sélection plus confidentielle."
           />
 
-          <div className="grid gap-6 md:grid-cols-2 2xl:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3 2xl:grid-cols-3">
             {properties.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}

@@ -1,3 +1,8 @@
+export type PropertyImage = {
+  src: string;
+  alt: string;
+};
+
 export type Property = {
   id: string;
   title: string;
@@ -8,7 +13,11 @@ export type Property = {
   category: string;
   surface: string;
   rooms: string;
+  images: [PropertyImage, ...PropertyImage[]];
 };
+
+const propertyImagePath = (propertyId: string, fileName: string) =>
+  `/images/properties/${propertyId}/${fileName}`;
 
 export const properties: Property[] = [
   {
@@ -21,6 +30,12 @@ export const properties: Property[] = [
     category: "Villa",
     surface: "520 m²",
     rooms: "5 suites",
+    images: [
+      {
+        src: propertyImagePath("villa-meublee-anfa-casablanca", "cover.svg"),
+        alt: "Villa meublée avec jardin à Anfa, Casablanca",
+      },
+    ],
   },
   {
     id: "appartement-premium-racine-casablanca",
@@ -32,6 +47,15 @@ export const properties: Property[] = [
     category: "Appartement",
     surface: "168 m²",
     rooms: "3 chambres",
+    images: [
+      {
+        src: propertyImagePath(
+          "appartement-premium-racine-casablanca",
+          "cover.svg",
+        ),
+        alt: "Appartement premium meublé à Racine, Casablanca",
+      },
+    ],
   },
   {
     id: "studio-cfc-casablanca",
@@ -43,6 +67,12 @@ export const properties: Property[] = [
     category: "Studio",
     surface: "58 m²",
     rooms: "1 pièce",
+    images: [
+      {
+        src: propertyImagePath("studio-cfc-casablanca", "cover.svg"),
+        alt: "Studio haut standing à Casablanca Finance City",
+      },
+    ],
   },
   {
     id: "penthouse-location-anfa-casablanca",
@@ -54,6 +84,12 @@ export const properties: Property[] = [
     category: "Penthouse",
     surface: "310 m²",
     rooms: "4 chambres",
+    images: [
+      {
+        src: propertyImagePath("penthouse-location-anfa-casablanca", "cover.svg"),
+        alt: "Penthouse avec terrasse à Anfa, Casablanca",
+      },
+    ],
   },
   {
     id: "duplex-gauthier-casablanca",
@@ -65,6 +101,12 @@ export const properties: Property[] = [
     category: "Duplex",
     surface: "260 m²",
     rooms: "4 chambres",
+    images: [
+      {
+        src: propertyImagePath("duplex-gauthier-casablanca", "cover.svg"),
+        alt: "Duplex rénové à Gauthier, Casablanca",
+      },
+    ],
   },
   {
     id: "villa-front-golf-bouskoura",
@@ -76,6 +118,12 @@ export const properties: Property[] = [
     category: "Villa",
     surface: "640 m²",
     rooms: "5 chambres",
+    images: [
+      {
+        src: propertyImagePath("villa-front-golf-bouskoura", "cover.svg"),
+        alt: "Villa front golf à Bouskoura",
+      },
+    ],
   },
 ];
 
