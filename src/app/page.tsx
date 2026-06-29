@@ -26,23 +26,25 @@ export default function Home() {
           sizes="100vw"
           className="object-cover"
         />
+
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,8,6,0.96)_0%,rgba(8,8,6,0.82)_36%,rgba(8,8,6,0.38)_70%,rgba(8,8,6,0.08)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-36 bg-[linear-gradient(180deg,rgba(8,8,6,0),var(--black))]" />
 
         <div className="relative mx-auto flex min-h-[calc(100svh-156px)] max-w-7xl flex-col justify-between gap-10 sm:gap-14">
           <div className="max-w-3xl pt-6 lg:pt-16">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold-light)] sm:mb-5 sm:text-sm sm:tracking-[0.28em]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--gold-light)] sm:mb-5 sm:text-sm sm:tracking-[0.28em] reveal">
               Locations premium au Maroc
             </p>
-            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.06] text-balance text-white sm:text-6xl sm:leading-[1.02] lg:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.06] text-balance text-white sm:text-6xl sm:leading-[1.02] lg:text-7xl reveal">
               Louer une adresse élégante, avec un accompagnement exigeant.
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-[#f4ead5] sm:mt-7 sm:text-lg sm:leading-8">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#f4ead5] sm:mt-7 sm:text-lg sm:leading-8 reveal">
               Villas, appartements et studios haut standing au Maroc, filtrés
               avec sérieux pour vous faire gagner du temps avant chaque visite.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
+
               <Button href="/catalogue" size="lg">
                 Voir les biens
               </Button>

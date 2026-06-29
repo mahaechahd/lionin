@@ -1,7 +1,10 @@
 import "./globals.css";
+import "./animations.css";
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
+import RevealController from "@/app/reveal";
 import type { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   title: "LIONIN Immobilier | Locations premium au Maroc",
@@ -18,11 +21,12 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <Navbar />
-
+        <RevealController />
         <main>{children}</main>
-
         <Footer />
       </body>
     </html>
   );
 }
+
+

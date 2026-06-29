@@ -69,11 +69,11 @@ export default function Footer() {
           </h2>
           <div className="mt-5 grid gap-3 text-sm text-[var(--text-secondary)]">
             <p>Casablanca, Maroc</p>
-            <a href="tel:+212600000000" className="w-fit hover:text-[var(--gold-light)]">
-              +212 6 00 00 00 00
+            <a href="tel:+212617042339" className="w-fit hover:text-[var(--gold-light)]">
+              0617042339
             </a>
-            <a href="mailto:contact@lionin.ma" className="w-fit hover:text-[var(--gold-light)]">
-              contact@lionin.ma
+              <a href="mailto:lioninimmobilier@gmail.com" className="w-fit hover:text-[var(--gold-light)]">
+              lioninimmobilier@gmail.com
             </a>
           </div>
         </div>

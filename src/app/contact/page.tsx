@@ -3,20 +3,25 @@ import Button from "@/components/ui/Button";
 const contactDetails = [
   {
     label: "Téléphone",
-    value: "+212 6 00 00 00 00",
+    value: "0617042339",
     note: "Disponible du lundi au vendredi",
   },
   {
     label: "Email",
-    value: "contact@lionin.ma",
+    value: "lioninimmobilier@gmail.com",
     note: "Pour demandes privées et partenariats",
   },
   {
     label: "Adresse",
-    value: "Casablanca, Maroc",
+    value:
+      "17,Rue Bachir laalej, le louvre centre, étage 4, porte 20, Casablanca Maroc",
     note: "Rendez-vous uniquement sur confirmation",
   },
 ];
+
+
+
+
 
 const requestTypes = [
   "Recherche de location",
@@ -25,6 +30,7 @@ const requestTypes = [
   "Location entreprise / expatrié",
   "Autre demande",
 ];
+
 
 export default function ContactPage() {
   return (
